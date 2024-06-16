@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block title %}
+ТВП(плазма)
+{% endblock %}
+
+
+{% block content %}
+<div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">
+    <form action="/process_data_OPU_plasma/" method="POST">
+        {% csrf_token %}
+        <label for="name">Лептин:</label>
+        <input type="text" id="leptin" name="leptin" required step="any"><br><br>
+        <label for="name">Адипонектин:</label>
+        <input type="text" id="adiponectin" name="adiponectin" required step="any"><br><br>
+        <input type="submit" class="btn btn-primary" style="background-color: rgb(27, 85, 124); border: 0px" value="Отправить">
+    </form>
+  </div>
+{% endblock %}

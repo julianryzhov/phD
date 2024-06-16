@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block title %}
+Результат
+{% endblock %}
+
+
+{% block content %}
+<div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">
+    <h2>Вероятность наступления клинической беременности в текущем протоколе ВРТ: {{ result }}%</h2>
+    <a href="{% url 'home' %}" class="btn btn-primary" style="background-color: rgb(27, 85, 124); border: 0px">Посчитать еще раз</a>
+</div>
+{% endblock %}
